@@ -16,6 +16,9 @@ class ubuntu::cleanup {
 	package {'landscape-common':
 		ensure => 'purged'
 	}
+	package {'popularity-contest':
+		ensure => 'purged'
+	}
 
 # Don't need the puppet service running.  we do everything via apply.
 	service { "puppet":
